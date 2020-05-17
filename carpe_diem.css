@@ -1,13 +1,13 @@
-.cd-btn {
+.cd-btn, .cd-btn-inverse, .cd-btn-circle, .cd-btn-border, .cd-btn-enlighten, .cd-btn-darken, .cd-btn-buzz, .cd-btn-popin, .cd-btn-popout, .cd-btn-shadow {
   color: #ffffff;
   background-color: #dd4eb8;
   padding: 1rem 1rem;
   cursor: pointer;
-  /*transition: all 1s ease-in-out; */
+  transition: all 1s;
   border: none;
 }
 .cd-btn-shadow:hover {
-  box-shadow: 1px 1px 20px 5px #4d4d4d;
+  box-shadow: -2px 3px 6px 2px #4d4d4d;
 }
 .cd-btn-popout:hover {
   transform: scale(1.1, 1.1);
@@ -67,6 +67,112 @@
   height: 4rem;
   border-radius: 2rem;
 }
+.cd-btn-inverse {
+  border: 2px solid #ffffff;
+}
+.cd-btn-inverse:hover {
+  color: #dd4eb8;
+  background-color: #ffffff;
+  border: 2px solid #dd4eb8;
+  /*border-color:$btn_bg;*/
+}
+
+.cd-scroll-slim::-webkit-scrollbar {
+  width: 0.2083333333rem;
+}
+.cd-scroll-slim::-webkit-scrollbar-thumb {
+  background: grey;
+}
+.cd-scroll-slim::-webkit-scrollbar-track {
+  background: white;
+}
+.cd-scroll-transparent::-webkit-scrollbar {
+  width: 0.625rem;
+}
+.cd-scroll-transparent::-webkit-scrollbar-thumb {
+  background: grey;
+}
+.cd-scroll-transparent::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+.cd-scroll-round::-webkit-scrollbar {
+  width: 0.625rem;
+}
+.cd-scroll-round::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 0.625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.cd-scroll-round::-webkit-scrollbar-track {
+  background: #00000075;
+}
+.cd-scroll-regular::-webkit-scrollbar {
+  width: 0.625rem;
+}
+.cd-scroll-regular::-webkit-scrollbar-thumb {
+  background: white;
+}
+.cd-scroll-regular::-webkit-scrollbar-track {
+  background: #00000075;
+}
+
+.cd-card, .cd-card-feature, .cd-card-solid-curve, .cd-card-solid {
+  width: 12rem;
+  height: 12.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.cd-card-solid {
+  background-color: #fe731e;
+  border-right: 0.4285714286rem solid #e85901;
+  border-bottom: 0.8rem solid #e85901;
+  border-radius: 1.2rem;
+}
+.cd-card-solid:hover {
+  box-shadow: 1px 7px 22px 2px #5e5e5e;
+}
+.cd-card-solid-curve {
+  background-color: #fe731e;
+  border-bottom: 0.6666666667rem solid #e85901;
+  border-radius: 1.2rem;
+}
+.cd-card-solid-curve:hover {
+  box-shadow: 1px 7px 22px 2px #5e5e5e;
+}
+.cd-card-img {
+  overflow: hidden;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.cd-flex-center, .cd-card-img, .cd-card-txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cd-div {
+  display: flex;
   padding: 10% 10%;
 }
+
+.demo-card {
+  color: white;
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+
+.demo-scroll {
+  width: 30px;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.demo-scroll-in {
+  width: 30px;
+  height: 400px;
+}
+
+/*# sourceMappingURL=carpe_diem.css.map */
