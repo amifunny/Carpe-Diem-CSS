@@ -197,10 +197,11 @@ $text_color:#ffffff;
 .cd-card{
 
 	$card_w : 12rem;
+	$card_h : $card_w+0.5rem;
 	$bg_color : #fe731e;
 
 	width: $card_w;
-	height: $card_w+0.5rem;
+	height: $card_h;
 	transition: all 0.5s ease-in-out;
 
 	&-solid{
@@ -230,25 +231,78 @@ $text_color:#ffffff;
 
 	&-feature{
 		@extend .cd-card;
+	    height: 20rem;
+    	width: 15rem;
 		&:hover{
 			box-shadow: 1px 7px 22px 2px #5e5e5e;
 		}
 	}
 
 	&-img{
-		height: $card_w*0.80;
+		height: 70%;
 		overflow: hidden;
 	}
 
 	&-txt{
 		@extend .cd-flex-center;
-		height: $card_w*0.40;
-		background-color: #000000c2;
+		color: black;
+		height: 30%;
+		background-color:white;
 		font-size: 0.8rem;
-		padding: 0.5rem;
+		padding: 0 5%;
 	}
 
 }
+
+
+.cd-ta{
+
+	min-height: 200px;
+	min-width: 300px;
+	resize: none;
+	border:none;
+    font-size: 18px;
+    padding: 8px;
+
+    &::selection{
+    	color:white;
+    	background-color:#5c5c5c;
+    }
+
+}
+
+$directions: 'u','d','r','l';
+
+@each $glow_dir in $directions {
+	.cd-glow-#{$glow_dir} { 
+
+
+		$active_color : #007eff;
+		$inactive_color : #81b1e2;
+
+		$stick_thick : 5px;
+
+		@if $glow_dir=='u'{
+			border: 5px solid $inactive_color;
+		} @else if $glow_dir=='b'{
+
+		} @else if $glow_dir=='r'{
+			border-inline-start: $stick_thick solid $inactive_color;
+		} @else{
+
+		}	
+
+
+	    &:hover,&:focus{
+	    	outline: none;
+	    	border-color: $active_color;
+	    }
+
+
+	}
+}
+
+
 
 body{
 	font-family: 'Roboto', sans-serif;
@@ -269,7 +323,7 @@ body{
 .demo-card{
 	color: white;
 	font-size: 1.5rem;
-	margin: 2rem;
+	margin: 0 2rem;
 }
 
 .demo-scroll{
