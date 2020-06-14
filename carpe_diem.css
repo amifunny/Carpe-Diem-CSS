@@ -1,3 +1,7 @@
+button:focus {
+  outline: none;
+}
+
 .cd-btn, .cd-btn-inverse, .cd-btn-circle, .cd-btn-border, .cd-btn-enlighten, .cd-btn-darken, .cd-btn-buzz, .cd-btn-popin, .cd-btn-popout, .cd-btn-shadow {
   color: #ffffff;
   background-color: #dd4eb8;
@@ -74,7 +78,57 @@
   color: #dd4eb8;
   background-color: #ffffff;
   border: 2px solid #dd4eb8;
-  /*border-color:$btn_bg;*/
+}
+
+.cd-switch, .cd-switch-round {
+  height: 25px;
+  width: 75px;
+  position: relative;
+  display: inline-block;
+  /*Round Shape Switch Button*/
+}
+.cd-switch > input, .cd-switch-round > input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+.cd-switch > span, .cd-switch-round > span {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 25px;
+  width: 75px;
+  background-color: ghostwhite;
+  transition: all ease-in-out 0.4s;
+  padding: 2px;
+}
+.cd-switch > span:before, .cd-switch-round > span:before {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  background-color: dodgerblue;
+  transition: all ease-in-out 0.4s;
+  margin: 2px;
+}
+.cd-switch > input:checked + span, .cd-switch-round > input:checked + span {
+  background-color: dodgerblue;
+}
+.cd-switch > input:checked + span:before, .cd-switch-round > input:checked + span:before {
+  transform: translateX(50px);
+  background-color: ghostwhite;
+}
+.cd-switch-round > span {
+  border-radius: 20px;
+}
+.cd-switch-round > span:before {
+  border-radius: 20px;
 }
 
 .cd-scroll-slim::-webkit-scrollbar {
@@ -197,8 +251,11 @@
   border-color: #007eff;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+.cd-srch-bar {
+  width: 250px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
 }
 
 .cd-flex-center, .cd-card-txt {
@@ -207,27 +264,23 @@ body {
   justify-content: center;
 }
 
-.cd-div {
-  display: flex;
-  padding: 10% 10%;
+.cd-h-div {
+  margin: 0 auto;
+  text-align: center;
 }
 
-.demo-card {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0 2rem;
+.cd-h-div > div {
+  display: inline-block;
 }
 
-.demo-scroll {
-  width: 30px;
-  height: 200px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+.cd-v-div {
+  width: 100%;
 }
 
-.demo-scroll-in {
-  width: 30px;
-  height: 400px;
+.cd-heading {
+  font-size: 2em;
+  font-family: serif;
+  text-align: center;
 }
 
 /*# sourceMappingURL=carpe_diem.css.map */
