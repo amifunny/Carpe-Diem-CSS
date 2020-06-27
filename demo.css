@@ -21,6 +21,54 @@ body{
 	height: 400px;
 }
 
+.demo-type-section{
+	padding: 2rem 0;
+    width: 60%;
+    margin: auto;
+}
+
+.demo-show-usage{
+    font-size: 1.3rem;
+    padding: 2rem 0;
+}
+
+.demo-usage-title{
+	margin-bottom: 1rem;
+}
+
+.demo-pre{
+	background: white;
+    border: none;
+    border-radius: 10px;
+    white-space: pre-line;
+    margin: 0;
+}
+
+.demo-xmp{
+    white-space: pre-line;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+.demo-usage-title{
+	text-align: center;
+}
+
+.demo-section-border{
+	width: 40%;
+	border-bottom: 1px solid #585858;
+}
+
+.demo-example{
+	margin: 1rem 0.5rem;
+}
+
+
+
+
+
+
+
 
 
 

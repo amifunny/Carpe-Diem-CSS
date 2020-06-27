@@ -6,125 +6,331 @@
 	<link rel="stylesheet" type="text/css" href="demo.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
 </head>
 <body>
+<!-- BUTTONS------------------------------------------------------------>
 
-	<div class="cd-v-div">
-		
-		<div class="cd-heading">
-			Buttons
-		</div>			
-		<div class="cd-h-div">
-			<button class="cd-btn-shadow">Shadow</button>
-			<button class="cd-btn-popout">Pop-out</button>
-			<button class="cd-btn-popin">Pop-in</button>
-			<button class="cd-btn-buzz">Buzz</button>
-			<button class="cd-btn-darken">Darken</button>
-			<button class="cd-btn-enlighten">cd-btn-enlighten</button>
-			<button class="cd-btn-border">Border</button>
-			<button class="cd-btn-circle">Circle</button>
-			<button class="cd-btn-inverse">Inverse</button>
-		</div>
-
-	</div>
-
-	<div class="cd-v-div">
-		
-		<div class="cd-h-div">
-			
-			<div>
-				<label class="cd-switch">
-					<input type="checkbox">
-					<span></span>
-				</label>
-			</div>	
-
-			<div>
-				<label class="cd-switch-round">
-					<input type="checkbox">
-					<span></span>
-				</label>
-			</div>	
-
-		</div>
-
-	</div>
-
-	<div class="cd-v-div">
-		
-		<div class="cd-heading">
-			Scrolls
-		</div>
-
-		<div class="cd-h-div">
-			<div class="demo-scroll cd-scroll-slim">
-				<div class="demo-scroll-in"></div>	
-			</div>
-
-			<div class="demo-scroll cd-scroll-transparent">
-				<div class="demo-scroll-in"></div>	
-			</div>
-
-			<div class="demo-scroll cd-scroll-round">
-				<div class="demo-scroll-in"></div>	
-			</div>
+	<div class="demo-type-section">
+		<div class="demo-show-output">
+			<div class="cd-v-div">
 				
-			<div class="demo-scroll cd-scroll-regular">
-				<div class="demo-scroll-in"></div>	
-			</div>
-		</div>
-				
+				<div class="cd-heading">
+					Buttons
+				</div>			
+				<div class="cd-h-div">
 
-	</div>
-
-	<div class="cd-v-div">
-		
-		<div class="cd-heading">
-			Cards
-		</div>
-
-		<div class="cd-h-div">
-			<div class="cd-card-solid cd-flex-center demo-card">
-				<div>HEEYAA !!</div>
-			</div>
-
-			<div class="cd-card-solid-curve cd-flex-center demo-card">
-				<div>Howwdy !!</div>
-			</div>
-
-			<div class="cd-card-feature demo-card">
-				
-				<div class="cd-card-img">
-					<img width="100%" height="100%" src="utils/card_img.jpg">
-				</div>
-				<div class="cd-card-txt">
-					Ludwig van Beethoven was a German composer and pianist; his music is amongst the most performed of the classical repertoire.
+					<div class="demo-example">
+						<div>cd-btn-shadow</div>
+						<button class="cd-btn-shadow">Shadow</button>
+					</div>
+					<div class="demo-example">
+						<div>cd-btn-popout</div>
+						<button class="cd-btn-popout">Shadow</button>
+					</div>	
+					<div class="demo-example">
+						<div>cd-btn-popin</div>
+						<button class="cd-btn-popin">Pop-in</button>
+					</div>	
+					<div class="demo-example">
+						<div>cd-btn-buzz</div>
+						<button class="cd-btn-buzz">Buzz</button>
+					</div>	
+					<div class="demo-example">
+						<div>cd-btn-darken</div>
+						<button class="cd-btn-darken">Darken</button>
+					</div>	
+					<div class="demo-example">
+						<div>cd-btn-enlighten</div>
+						<button class="cd-btn-enlighten">Enlighten</button>
+					</div>	
+					<div class="demo-example">
+						<div>cd-btn-border</div>
+						<button class="cd-btn-border">Border</button>
+					</div>	
+					<div class="demo-example">
+						<div>cd-btn-circle</div>
+						<button class="cd-btn-circle">Circle</button>
+					</div>	
+					<div class="demo-example">
+						<div>cd-btn-inverse</div>
+						<button class="cd-btn-inverse">Inverse</button>
+					</div>	
+					
+					
 				</div>
 
 			</div>
 		</div>	
 
-	</div>
+		<div class="demo-show-usage cd-flex-center" >
+			
+			<div>
+				<div class="demo-usage-title">Usage</div>
+				<pre class="prettyprint lang-html demo-pre">
+					<xmp class="demo-xmp">
+						<button class="cd-btn-inverse">
+						Inverse
+						</button>
+					</xmp>
+				</pre>
+			</div>	
 
-	<div class="cd-div">
-	
-		<div class="cd-heading">
-			Inputs
 		</div>
 
-		<div class="cd-h-div">
+	</div>
 
-			<div>
-				<textarea class="cd-ta cd-glow-r">Here is Some Text. Try to select it using Cursor.</textarea>
+	<div class="demo-section-border-inner cd-flex-center">
+		<div class="demo-section-border"></div>
+	</div>
+
+<!-- SWITCH------------------------------------------------------------>
+
+	<div class="demo-type-section">
+		<div class="demo-show-output">
+			<div class="cd-v-div">
+				
+				<div class="cd-h-div">
+				
+					<div class="demo-example">
+						<div>cd-switch</div>
+						<div>
+							<label class="cd-switch">
+								<input type="checkbox">
+								<span></span>
+							</label>
+						</div>
+					</div>
+
+					<div class="demo-example">
+						<div>cd-switch-round</div>
+						<div>
+							<label class="cd-switch-round">
+								<input type="checkbox">
+								<span></span>
+							</label>
+						</div>	
+					</div>
+
+				</div>
 
 			</div>
+		</div>	
 
-			<!-- <div class="cd-srch-bar">
-				<input type="text" name="">
-				<button>Go</button>
-			</div> -->
-		
+		<div class="demo-show-usage cd-flex-center" >
+			
+			<div>
+				<div class="demo-usage-title">Usage</div>
+				<pre class="prettyprint lang-html demo-pre">
+					<xmp class="demo-xmp">
+						<label class="cd-switch">
+						<input type="checkbox">
+						<span></span>
+						</label>
+					</xmp>
+				</pre>
+			</div>	
+
+		</div>
+
 	</div>
+
+	<div class="demo-section-border-inner cd-flex-center">
+		<div class="demo-section-border"></div>
+	</div>
+
+<!-- SCROLLS------------------------------------------------------------>
+
+	<div class="demo-type-section">
+		<div class="demo-show-output">
+			<div class="cd-v-div">
+		
+				<div class="cd-heading">
+					Scrolls
+				</div>
+
+				<div class="cd-h-div">
+
+					<div class="demo-example">
+						<div>cd-scroll-slim</div>
+						<div class="demo-scroll cd-scroll-slim">
+							<div class="demo-scroll-in"></div>	
+						</div>
+					</div>
+
+					<div class="demo-example">
+						<div>cd-scroll-transparent</div>
+						<div class="demo-scroll cd-scroll-transparent">
+							<div class="demo-scroll-in"></div>	
+						</div>
+					</div>
+
+					<div class="demo-example">
+						<div>cd-scroll-round</div>
+						<div class="demo-scroll cd-scroll-round">
+							<div class="demo-scroll-in"></div>	
+						</div>
+					</div>
+
+					<div class="demo-example">
+						<div>cd-scroll-regular</div>
+						<div class="demo-scroll cd-scroll-regular">
+							<div class="demo-scroll-in"></div>	
+						</div>
+					</div>				
+
+				</div>
+						
+
+			</div>
+		</div>	
+
+		<div class="demo-show-usage cd-flex-center" >
+			
+			<div>
+				<div class="demo-usage-title">Usage</div>
+				<pre class="prettyprint lang-html demo-pre">
+					<xmp class="demo-xmp">
+						<div class="cd-scroll-regular">
+							Some content large than parent div ...	
+						</div>
+					</xmp>
+				</pre>
+			</div>	
+
+		</div>
+
+	</div>
+
+	<div class="demo-section-border-inner cd-flex-center">
+		<div class="demo-section-border"></div>
+	</div>
+
+<!-- CARDS ------------------------------------------------------------>
+
+	<div class="demo-type-section">
+		<div class="demo-show-output">
+			<div class="cd-v-div">
+		
+				<div class="cd-heading">
+					Cards
+				</div>
+
+				<div class="cd-h-div">
+
+					<div class="demo-example">
+						<div>cd-card-solid</div>
+						<div class="cd-card-solid cd-flex-center demo-card">
+							<div>HEEYAA !!</div>
+						</div>
+					</div>	
+					
+					<div class="demo-example">
+						<div>cd-card-solid-curve</div>
+						<div class="cd-card-solid-curve cd-flex-center demo-card">
+							<div>Howwdy !!</div>
+						</div>
+					</div>	
+					
+					<div class="demo-example">
+						<div>cd-card-feature</div>
+						<div class="cd-card-feature demo-card">
+							
+							<div class="cd-card-img">
+								<img width="100%" height="100%" src="utils/card_img.jpg">
+							</div>
+							<div class="cd-card-txt">
+								Ludwig van Beethoven was a German composer and pianist; his music is amongst the most performed of the classical repertoire.
+							</div>
+
+						</div>
+					</div>	
+
+					
+				</div>	
+
+			</div>
+		</div>
+
+		<div class="demo-show-usage cd-flex-center" >
+			
+			<div>
+				<div class="demo-usage-title">Usage</div>
+				<pre class="prettyprint lang-html demo-pre">
+					<xmp class="demo-xmp">
+						<div class="cd-scroll-regular">
+							Some content large than parent div ...	
+						</div>
+					</xmp>
+				</pre>
+			</div>	
+
+		</div>
+
+	</div>
+
+	<div class="demo-section-border-inner cd-flex-center">
+		<div class="demo-section-border"></div>
+	</div>
+
+<!-- INPUTS ---------------------------------------->
+	
+	<div class="demo-type-section">
+		<div class="demo-show-output">
+			<div class="cd-v-div">
+				
+					<div class="cd-div">
+	
+						<div class="cd-heading">
+							Inputs
+						</div>
+
+						<div class="cd-h-div">
+
+							<div class="demo-example">
+								<div>cd-ta cd-glow-r cd-selection</div>
+								<div>
+									<textarea class="cd-ta cd-glow-r cd-selection">Here is Some Text. Try to select it using Cursor.</textarea>
+								</div>
+							</div>	
+							
+
+							<!-- <div class="cd-srch-bar">
+								<input type="text" name="">
+								<button>Go</button>
+							</div> -->
+						
+					</div>
+			</div>
+		</div>	
+
+		<div class="demo-show-usage cd-flex-center" >
+			
+			<div>
+				<div class="demo-usage-title">Usage</div>
+				<pre class="prettyprint lang-html demo-pre">
+					<xmp class="demo-xmp">
+						<!-- cd-ta : for textarea styling  
+						cd-glow-r or [-u,-d,-l] : for glowing border
+						cd-selection : for different selection color -->
+						<textarea class="cd-ta cd-glow-r cd-selection">
+						Some Text ... 
+						</textarea>
+					</xmp>
+				</pre>
+			</div>	
+
+		</div>
+
+	</div>
+
+	<div class="demo-section-border-inner cd-flex-center">
+		<div class="demo-section-border"></div>
+	</div>
+
+
+
 
 
 

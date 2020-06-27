@@ -8,7 +8,7 @@ $vibrant_orange:#ff7a01;
 $text_color:#ffffff;
 
 button:focus{
-	outline:none;
+	outline: 2px solid blueviolet;
 }
 
 .cd-btn{
@@ -341,14 +341,15 @@ button:focus{
 	resize: none;
 	border:none;
     font-size: 18px;
-    padding: 8px;
-
-    &::selection{
-    	color:white;
-    	background-color:#5c5c5c;
-    }
+    padding: 3% 5%;
 
 }
+
+.cd-selection::selection{
+	color:white;
+	background-color:#5c5c5c;
+}
+
 
 $directions: 'u','d','r','l';
 
@@ -363,7 +364,7 @@ $directions: 'u','d','r','l';
 
 		@if $glow_dir=='u'{
 			border: 5px solid $inactive_color;
-		} @else if $glow_dir=='b'{
+		} @else if $glow_dir=='d'{
 
 		} @else if $glow_dir=='r'{
 			border-inline-start: $stick_thick solid $inactive_color;
@@ -412,7 +413,7 @@ $directions: 'u','d','r','l';
 
 .cd-heading{
 	font-size: 2em;
-	font-family: serif;
+	font-family: sans-serif;
 	text-align: center;
 }
 

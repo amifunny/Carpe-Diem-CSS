@@ -1,5 +1,5 @@
 button:focus {
-  outline: none;
+  outline: 2px solid blueviolet;
 }
 
 .cd-btn, .cd-btn-inverse, .cd-btn-circle, .cd-btn-border, .cd-btn-enlighten, .cd-btn-darken, .cd-btn-buzz, .cd-btn-popin, .cd-btn-popout, .cd-btn-shadow {
@@ -218,9 +218,10 @@ button:focus {
   resize: none;
   border: none;
   font-size: 18px;
-  padding: 8px;
+  padding: 3% 5%;
 }
-.cd-ta::selection {
+
+.cd-selection::selection {
   color: white;
   background-color: #5c5c5c;
 }
@@ -279,7 +280,7 @@ button:focus {
 
 .cd-heading {
   font-size: 2em;
-  font-family: serif;
+  font-family: sans-serif;
   text-align: center;
 }
 
