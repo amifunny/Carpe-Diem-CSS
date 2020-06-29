@@ -1,0 +1,84 @@
+.cd-hover-shadow:hover{
+	box-shadow: 5px 5px 20px 0px #5e5e5e;
+}
+
+.cd-border-curve{
+	border-radius : 1rem;
+}
+
+$num_of_cols : 10;
+$total_width: 100;
+$each_col_width : $total_width/$num_of_cols;
+@for $i from 1 through length($num_of_cols) {
+    
+    $col_width : $each_col_width*$i;
+
+	.cd-col-#{$i}{
+		width: $col_width
+	}
+
+}
+
+
+$gap_types : 'sm','md','lg';
+$gap_dimension : 0.5rem,1rem,2rem;
+@for $i from 1 through length($gap_types) {
+    $each_type: nth($gap_types, $i);
+    $each_dim: nth($gap_dimension, $i);
+
+	.cd-h-margin-#{$each_type}{
+		margin-right: $each_dim;
+		margin-left: $each_dim;
+	}
+
+	.cd-v-margin-#{$each_type}{
+		margin-top: $each_dim;
+		margin-bottom: $each_dim;
+	}
+
+	.cd-h-pad-#{$each_type}{
+		padding-right: $each_dim;
+		padding-left: $each_dim;
+	}
+
+	.cd-v-pad-#{$each_type}{
+		padding-top: $each_dim;
+		padding-bottom: $each_dim;
+	}
+
+}
+
+.cd-flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.cd-h-div{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.cd-h-div > * {
+	display: inline-block;
+}
+
+.cd-v-div{
+	width: 100%;
+}
+
+.cd-heading{
+	font-size: 2em;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.cd-pointer{
+	cursor: pointer;
+}
+
+.cd-disable-link{
+	color: inherit;
+    text-decoration: none;
+}

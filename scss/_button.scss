@@ -1,0 +1,202 @@
+$pad_horz:1rem;
+$pad_vert:1rem;
+
+$off_black:#4d4d4d;
+$vibrant_purple:#dd4eb8;
+$vibrant_orange:#ff7a01;
+$text_color:#ffffff;
+
+button:focus{
+	outline: 2px solid blueviolet;
+}
+
+.cd-btn{
+
+	$border_w : 2px;
+
+	$btn_bg : $vibrant_purple;
+	$btn_txt_color : $text_color;
+	color: $btn_txt_color;
+	background-color: $btn_bg;
+	padding: $pad_horz $pad_vert;
+	cursor:pointer;
+	transition: all 1s;
+	border:none;
+
+
+	&-shadow{
+		@extend .cd-btn;
+		&:hover{
+			box-shadow: -2px 3px 6px 2px #4d4d4d;
+		}	
+	}
+
+	&-popout{
+		@extend .cd-btn;
+		&:hover{
+			transform: scale(1.1,1.1);
+		}	
+	}
+
+	&-popin{
+		@extend .cd-btn;
+		&:hover{
+			transform: scale(0.9,0.9);
+		}
+	}
+
+	@keyframes buzz_anim{
+	  	0%{
+			transform:translateX(0%);
+		}
+		10%{
+			transform:translateX(10%);
+		}
+		20%{
+			transform:translateX(0%);
+		}
+		30%{
+			transform:translateX(-10%);
+		}
+		40%{
+			transform:translateX(0%);
+		}
+		50%{
+			transform:translateX(10%);
+		}
+		60%{
+			transform:translateX(0%);
+		}
+		70%{
+			transform:translateX(-10%);
+		}
+		80%{
+			transform:translateX(0%);
+		}
+		90%{
+			transform:translateX(10%);
+		}
+		100%{
+			transform:translateX(0%);
+		}
+	}
+
+	&-buzz{
+		@extend .cd-btn;
+		&:focus{
+			animation: buzz_anim 1s;
+		}	
+	}
+
+	&-darken{
+		@extend .cd-btn;
+		&:hover{
+			background-color:darken($btn_bg,10%);
+		}	
+	}
+
+	&-enlighten{
+		@extend .cd-btn;
+		&:hover{
+			background-color:lighten($btn_bg,10%);
+		}	
+	}
+
+	&-border{
+		@extend .cd-btn;
+		border:$border_w solid $text_color;
+	}
+
+	&-circle{
+		@extend .cd-btn;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 2rem;
+	}
+
+	&-inverse{
+		@extend .cd-btn;
+		border:2px solid $btn_txt_color;
+		&:hover{
+			color : $btn_bg;
+			background-color : $btn_txt_color;
+			border:2px solid $btn_bg;
+		}
+	}
+
+}
+
+.cd-switch{
+
+	$switch_h:25px;
+	$switch_w:75px;
+
+	$switch_bg_color:ghostwhite;
+	$switch_btn_color:dodgerblue;
+
+	height: $switch_h;
+	width: $switch_w;
+	position: relative;
+	display: inline-block;
+
+	&>input{
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+
+	&>span{
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		position: absolute;
+		height: $switch_h;
+		width: $switch_w;
+		background-color: $switch_bg_color;
+		transition: all ease-in-out 0.4s;
+		padding: 2px;
+	}
+
+	&>span:before{
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		position: absolute;
+		content:"";
+		height: $switch_h;
+		width: $switch_h;
+		background-color: $switch_btn_color;
+		transition: all ease-in-out 0.4s;
+		margin: 2px;
+
+	}
+
+	&>input:checked+span{
+		background-color: $switch_btn_color; 
+	}
+
+	&>input:checked+span:before{
+		transform: translateX( $switch_w - $switch_h );
+		background-color: $switch_bg_color;
+	}
+
+
+	/*Round Shape Switch Button*/
+	&-round{
+		@extend .cd-switch;
+
+		&>span{
+			border-radius: 20px;
+		}
+
+		&>span:before{
+			border-radius: 20px;
+		}
+
+	}
+
+}

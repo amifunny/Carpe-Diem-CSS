@@ -1,0 +1,70 @@
+.cd-scroll{
+
+	$avg_width:0.625rem;
+
+	&-slim{
+
+		&::-webkit-scrollbar{
+			width:$avg_width/3;
+		}
+
+		&::-webkit-scrollbar-thumb{
+		    background:grey;
+		}
+
+		&::-webkit-scrollbar-track {
+	  		background:white;
+	  	}
+	}
+
+
+	&-transparent{
+
+		&::-webkit-scrollbar{
+			width:$avg_width;
+		}
+
+		&::-webkit-scrollbar-thumb{
+		    background:grey;
+		}
+
+		&::-webkit-scrollbar-track {
+	  		background:#ffffff00;
+	  	}
+	}
+
+	&-round{
+
+		&::-webkit-scrollbar{
+			width:$avg_width;
+		}
+
+		&::-webkit-scrollbar-thumb{
+		    background:white;
+		    border-radius: $avg_width;
+			width:$avg_width;
+			height:$avg_width;
+		}
+
+		&::-webkit-scrollbar-track {
+	  		background:#00000075;
+	  	}
+	}
+
+	&-regular{
+
+		&::-webkit-scrollbar{
+			width:$avg_width;
+		}
+
+		&::-webkit-scrollbar-thumb{
+		    background:white;
+		}
+
+		&::-webkit-scrollbar-track {
+	  		background:#00000075;
+	  	}
+	}
+
+}
+

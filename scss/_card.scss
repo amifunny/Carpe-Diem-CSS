@@ -1,0 +1,96 @@
+.cd-card{
+
+	$card_w : 12rem;
+	$card_h : $card_w+0.5rem;
+	$bg_color : #fe731e;
+
+	width: $card_w;
+	height: $card_h;
+	transition: all 0.5s ease-in-out;
+
+	&-solid{
+		@extend .cd-card;
+		background-color: $bg_color;
+		border-right: $card_w/25 solid darken($bg_color,10%);
+		border-bottom: $card_w/15 solid darken($bg_color,10%);
+		border-radius: $card_w/10;
+
+		&:hover{
+			@extend .cd-hover-shadow;
+		}
+
+	}
+
+	&-solid-curve{
+		@extend .cd-card;
+		background-color: $bg_color;
+		border-bottom: $card_w/20 solid darken($bg_color,10%);
+		border-radius: $card_w/10;
+
+		&:hover{
+			@extend .cd-hover-shadow;
+		}
+
+	}
+
+	&-feature{
+		@extend .cd-card;
+	    height: 20rem;
+    	width: 15rem;
+		&:hover{
+			@extend .cd-hover-shadow;
+		}
+	}
+
+	&-img{
+		height: 70%;
+		overflow: hidden;
+		transition: all 0.5s ease-in-out;
+	}
+
+
+	&-img > img{
+		transition: all 0.5s ease-in-out;
+	}
+
+	&-img:hover > img{
+		transform: scale(1.1);
+	}
+
+	&-txt{
+		@extend .cd-flex-center;
+		color: black;
+		height: 30%;
+		background-color:white;
+		font-size: 0.8rem;
+		padding: 0 5%;
+	}
+
+	&-overlay{
+		@extend .cd-card;
+		position:relative;
+		transition: 0.5s all ease-in-out;
+	}
+
+	&-overlay-txt{
+		$translucent_bg:#000000bd;
+		$height: 30%;
+
+		bottom:0;
+		left:0;
+
+		height: $height;
+		width: 100%;
+
+		opacity: 0;
+		position:absolute;
+		background-color:$translucent_bg;
+		transition: 0.5s all ease-in-out;
+	}
+
+	&-overlay:hover &-overlay-txt{
+		opacity: 1;
+	}
+
+}
+

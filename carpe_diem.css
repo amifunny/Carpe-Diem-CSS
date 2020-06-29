@@ -131,6 +131,62 @@ button:focus {
   border-radius: 20px;
 }
 
+.cd-card, .cd-card-overlay, .cd-card-feature, .cd-card-solid-curve, .cd-card-solid {
+  width: 12rem;
+  height: 12.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.cd-card-solid {
+  background-color: #fe731e;
+  border-right: 0.48rem solid #e85901;
+  border-bottom: 0.8rem solid #e85901;
+  border-radius: 1.2rem;
+}
+.cd-card-solid-curve {
+  background-color: #fe731e;
+  border-bottom: 0.6rem solid #e85901;
+  border-radius: 1.2rem;
+}
+.cd-card-feature {
+  height: 20rem;
+  width: 15rem;
+}
+.cd-card-img {
+  height: 70%;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.cd-card-img > img {
+  transition: all 0.5s ease-in-out;
+}
+.cd-card-img:hover > img {
+  transform: scale(1.1);
+}
+.cd-card-txt {
+  color: black;
+  height: 30%;
+  background-color: white;
+  font-size: 0.8rem;
+  padding: 0 5%;
+}
+.cd-card-overlay {
+  position: relative;
+  transition: 0.5s all ease-in-out;
+}
+.cd-card-overlay-txt {
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  background-color: #000000bd;
+  transition: 0.5s all ease-in-out;
+}
+.cd-card-overlay:hover .cd-card-overlay-txt {
+  opacity: 1;
+}
+
 .cd-scroll-slim::-webkit-scrollbar {
   width: 0.2083333333rem;
 }
@@ -169,64 +225,6 @@ button:focus {
 }
 .cd-scroll-regular::-webkit-scrollbar-track {
   background: #00000075;
-}
-
-.cd-card, .cd-card-overlay, .cd-card-feature, .cd-card-solid-curve, .cd-card-solid {
-  width: 12rem;
-  height: 12.5rem;
-  transition: all 0.5s ease-in-out;
-}
-.cd-card-solid {
-  background-color: #fe731e;
-  border-right: 0.48rem solid #e85901;
-  border-bottom: 0.8rem solid #e85901;
-  border-radius: 1.2rem;
-}
-.cd-card-solid:hover {
-  box-shadow: 1px 5px 20px 5px #5e5e5e;
-}
-.cd-card-solid-curve {
-  background-color: #fe731e;
-  border-bottom: 0.6rem solid #e85901;
-  border-radius: 1.2rem;
-}
-.cd-card-solid-curve:hover {
-  box-shadow: 1px 5px 20px 5px #5e5e5e;
-}
-.cd-card-feature {
-  height: 20rem;
-  width: 15rem;
-}
-.cd-card-feature:hover {
-  box-shadow: 1px 5px 20px 5px #5e5e5e;
-}
-.cd-card-img {
-  height: 70%;
-  overflow: hidden;
-}
-.cd-card-txt {
-  color: black;
-  height: 30%;
-  background-color: white;
-  font-size: 0.8rem;
-  padding: 0 5%;
-}
-.cd-card-overlay {
-  position: relative;
-  transition: 0.5s all ease-in-out;
-}
-.cd-card-overlay-txt {
-  bottom: 0;
-  left: 0;
-  height: 30%;
-  width: 100%;
-  opacity: 0;
-  position: absolute;
-  background-color: #000000bd;
-  transition: 0.5s all ease-in-out;
-}
-.cd-card-overlay:hover .cd-card-overlay-txt {
-  opacity: 1;
 }
 
 .cd-ta {
@@ -270,18 +268,40 @@ button:focus {
 }
 
 .cd-input {
-  padding: 1rem;
-  margin: 0.1rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.cd-hover-shadow:hover, .cd-card-solid:hover, .cd-card-solid-curve:hover, .cd-card-feature:hover {
+  box-shadow: 5px 5px 20px 0px #5e5e5e;
+}
+
+.cd-border-curve {
+  border-radius: 1rem;
+}
+
+.cd-col-1 {
+  width: 10;
 }
 
 .cd-h-margin-sm {
-  margin-right: 0.2rem;
-  margin-left: 0.2rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
-.cd-h-margin-sm {
-  margin-right: 0.2rem;
-  margin-left: 0.2rem;
+.cd-v-margin-sm {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cd-h-pad-sm, .cd-input {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.cd-v-pad-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .cd-h-margin-md {
@@ -289,19 +309,39 @@ button:focus {
   margin-left: 1rem;
 }
 
-.cd-h-margin-md {
-  margin-right: 1rem;
-  margin-left: 1rem;
+.cd-v-margin-md {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cd-h-pad-md {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.cd-v-pad-md, .cd-input {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .cd-h-margin-lg {
-  margin-right: 4rem;
-  margin-left: 4rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
-.cd-h-margin-lg {
-  margin-right: 4rem;
-  margin-left: 4rem;
+.cd-v-margin-lg {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cd-h-pad-lg {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.cd-v-pad-lg {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .cd-flex-center, .cd-card-txt {
@@ -315,7 +355,7 @@ button:focus {
   text-align: center;
 }
 
-.cd-h-div > div {
+.cd-h-div > * {
   display: inline-block;
 }
 
