@@ -4,6 +4,8 @@ A CSS library for Swift need for Modern Web Design capabilities.
 
 It provides quick makeover from standard HTML styles to popular modern web designs.
 
+See demo - https://amifunny.github.io/Carpe-Diem-CSS/
+
 # HEY! Feel free to contribute.
 
 If you are new to CSS , SASS is just a better way to write it.
